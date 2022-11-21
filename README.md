@@ -1,5 +1,7 @@
 # React Dashboard
 
+You can move each chart and change the size. The reset button returns the charts to their places.
+
 - [Demo Link](https://aleksandra-prognimak.github.io/react-dashboard-with-db/)
 
 ---
