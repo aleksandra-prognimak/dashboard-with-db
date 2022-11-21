@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -19,10 +20,11 @@ app.use(express.json());
 
 app.use('/', dataRoute);
 
-const start = async () => {
+const start = async() => {
   try {
     await mongoose.connect(
-      `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.pq1komy.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`,
+      `mongodb+srv://${DB_USER}:${DB_PASSWORD}` 
+      + `@cluster0.pq1komy.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`,
     );
 
     app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));

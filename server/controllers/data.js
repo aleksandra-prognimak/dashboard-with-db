@@ -29,7 +29,7 @@ export const data = async (req, res) => {
   }
 }; */
 
-export const getData = async (req, res) => {
+export const getData = async(req, res) => {
   try {
     const data = await City.find();
 
