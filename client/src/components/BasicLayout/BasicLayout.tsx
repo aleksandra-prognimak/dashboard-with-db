@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { WidthProvider, Responsive } from 'react-grid-layout';
-import { data } from '../../data/data';
+import { Data } from '../../types/data';
 import { Layout, MiddleLayout, InnerLayout } from '../../types/layout';
 import { AreaChartComp } from '../AreaChart';
 import { BarChartComp } from '../BarChart';
@@ -8,6 +8,7 @@ import { LineChartComp } from '../LineChart';
 import { PieChartComp } from '../PieChart';
 import { StackedBarChartComp } from '../StackedBarChart';
 import './BasicLayout.scss';
+import { getData } from '../../api/data';
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
@@ -42,6 +43,22 @@ const BasicLayout = () => {
   const [layouts, setLayouts] = useState(
     JSON.parse(JSON.stringify(originalLayouts)),
   );
+
+  const [data, setData] = useState<Data[]>([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const newData = await getData();
+
+        setData(newData.data);
+      } catch {
+        throw new Error('error');
+      }
+    };
+
+    loadData();
+  }, []);
 
   const resetLayout = () => {
     setLayouts({});
