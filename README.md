@@ -1,6 +1,6 @@
 # React Dashboard
 
-- [Demo Link](https://aleksandra-prognimak.github.io/react-dashboard/)
+- [Demo Link](https://aleksandra-prognimak.github.io/react-dashboard-with-db/)
 
 ---
 
@@ -9,6 +9,7 @@
 > - React
 > - TypeScript
 > - SCSS
+> - Mongodb
 
 ### Libraries:
 
