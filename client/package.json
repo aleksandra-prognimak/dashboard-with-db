@@ -1,6 +1,6 @@
 {
-  "name": "dashboard",
-  "homepage": "https://aleksandra-prognimak.github.io/react-dashboard/",
+  "name": "dashboard-with-db",
+  "homepage": "https://aleksandra-prognimak.github.io/react-dashboard-with-db/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

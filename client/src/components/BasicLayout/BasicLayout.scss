@@ -3,7 +3,7 @@
 .button {
   border: none;
   outline: none;
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
   cursor: pointer;
   background-color: $mainPurple;
   border: 1px solid $mainPurple;
@@ -33,6 +33,9 @@
 }
 
 .react-grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $white;
   transition: all 1000ms ease;
   transition-property: left, top;
