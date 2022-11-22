@@ -20,6 +20,10 @@ app.use(express.json());
 
 app.use('/', dataRoute);
 
+app.get('/', (req, res) => {
+  res.end(`<h1>Hello</h1>`);
+});
+
 const start = async() => {
   try {
     await mongoose.connect(
