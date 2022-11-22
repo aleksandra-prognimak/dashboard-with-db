@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3002/data';
+export const BASE_URL = 'http://localhost:5000/data';
 
 type RequestMethod = 'GET';
 
